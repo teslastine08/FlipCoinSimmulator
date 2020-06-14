@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Welcome to flipcoin problem statement"
-echo "-------------------------------------"
+
 flipping=42;
 a=0;
 Heads=0;
@@ -14,21 +14,20 @@ Flip=$(($RANDOM%2))
 	#statements
 		echo "Coin flipped to Heads"
 		count_H=$(($count_H+1))
-		
+
 	else
 		echo "Coin flipped to Tails"
 		count_T=$(($count_T+1))
-		
+
 	fi
 	a=$(($a+1))
-	#statements
 done
 
 echo "Total times of Heads won: " $count_H
 echo "Total times of Tails won: " $count_T
 
 if [[ $count_H -eq $count_T ]]; then
-	#statements
+
 	echo "Its Tie"
 
 elif [[ $count_H -le $count_T ]]; then
